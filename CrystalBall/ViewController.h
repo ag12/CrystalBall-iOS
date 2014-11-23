@@ -8,8 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
 
+@class CrystalBall;
 
+@interface ViewController : UIViewController 
+
+ //- (IBAction)buttonPressed;
+
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
+@property (weak, nonatomic) IBOutlet UILabel* predictionLabel;
+@property (strong, nonatomic) CrystalBall* crystalBall;
+- (void) randomPrediction;
 @end
 
