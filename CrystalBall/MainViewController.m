@@ -6,17 +6,17 @@
 //  Copyright (c) 2014 Netlight. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MainViewController.h"
 #import "CrystalBall.h"
 
 #import "AppHelper.h"
 #import <AudioToolbox/AudioToolbox.h>
 #import "Logging.h"
 
-@interface ViewController ()
+@interface MainViewController ()
 @end
 
-@implementation ViewController {
+@implementation MainViewController {
     @private
     SystemSoundID soundEffect;
 }

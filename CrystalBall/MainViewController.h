@@ -11,7 +11,7 @@
 
 @class CrystalBall;
 
-@interface ViewController : UIViewController 
+@interface MainViewController : UIViewController 
 
  //- (IBAction)buttonPressed;
 
