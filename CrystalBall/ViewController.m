@@ -11,35 +11,39 @@
 
 #import "AppHelper.h"
 #import <AudioToolbox/AudioToolbox.h>
+#import "Logging.h"
 
 @interface ViewController ()
 @end
 
 @implementation ViewController {
-
+    @private
     SystemSoundID soundEffect;
 }
-#pragma mark - Self
 
+#pragma mark - Delegate
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    self.crystalBall = [[CrystalBall alloc] init];
-
-    
+    self.crystalBall = [CrystalBall new];
+    [self setStyle];
+    [self setSoundSettings];
+}
+#pragma mark - Style
+- (void)setStyle {
     self.backgroundImageView.animationImages = [AppHelper getImageArray];
     self.backgroundImageView.animationDuration = 2.5f;
     self.backgroundImageView.animationRepeatCount = 1;
-    
+}
+#pragma mark - Sound
+
+- (void)setSoundSettings {
+
     NSString *soundPaht = [[NSBundle mainBundle] pathForResource:@"crystal_ball" ofType:@"mp3"];
     NSURL *soundUrl = [NSURL fileURLWithPath:soundPaht];
     AudioServicesCreateSystemSoundID(CFBridgingRetain(soundUrl), &soundEffect);
-    
-    
-    
+    AudioServicesPlayAlertSound(soundEffect);
 }
-
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 }
@@ -81,39 +85,28 @@
 // MOTIONS
 - (void) motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     [self clearPrediction];
-    NSLog(@"Motion began");
 }
 
 - (void) motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     if (motion == UIEventSubtypeMotionShake) {
         [self randomPrediction];
     }
-    NSLog(@"Motion motionEnded");
 }
 
 - (void) motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event {
-    NSLog(@"Motion motionCancelled");
 }
 
 #pragma mark - Motions Events
 
 
 //TOUCHES
-
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self clearPrediction];
-    NSLog(@"Touches touchesBegan");
 }
 - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     [self randomPrediction];
-    NSLog(@"Touches touchesEnded");
 }
-- (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
-    NSLog(@"Touches touchesCancelled");
-}
-- (void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-    NSLog(@"Touches touchesMoved");
-
-}
+- (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {}
+- (void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {}
 
 @end

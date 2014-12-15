@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A4369D11A3F493700FFA487 /* crystal_ball.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1A4369D01A3F493700FFA487 /* crystal_ball.mp3 */; };
 		1AA8672819FD357D00AFD88B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA8672719FD357D00AFD88B /* main.m */; };
 		1AA8672B19FD357D00AFD88B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA8672A19FD357D00AFD88B /* AppDelegate.m */; };
 		1AA8672E19FD357D00AFD88B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA8672D19FD357D00AFD88B /* ViewController.m */; };
@@ -15,7 +16,6 @@
 		1AA8673619FD357D00AFD88B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AA8673419FD357D00AFD88B /* LaunchScreen.xib */; };
 		1AA8674219FD357D00AFD88B /* CrystalBallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA8674119FD357D00AFD88B /* CrystalBallTests.m */; };
 		1AA8674E19FD6A0700AFD88B /* CrystalBall.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA8674D19FD6A0700AFD88B /* CrystalBall.m */; };
-		1AFF6B8F1A06970000F17DCE /* crystal_ball.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1AFF6B8E1A06970000F17DCE /* crystal_ball.mp3 */; };
 		1AFF6B9C1A069B1800F17DCE /* AppHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF6B9B1A069B1800F17DCE /* AppHelper.m */; };
 		1AFF6BA41A069F1C00F17DCE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AFF6BA31A069F1C00F17DCE /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -31,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A4369CF1A3F486900FFA487 /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
+		1A4369D01A3F493700FFA487 /* crystal_ball.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = crystal_ball.mp3; sourceTree = "<group>"; };
 		1AA8672219FD357D00AFD88B /* CrystalBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrystalBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AA8672619FD357D00AFD88B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AA8672719FD357D00AFD88B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -46,7 +48,6 @@
 		1AA8674119FD357D00AFD88B /* CrystalBallTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrystalBallTests.m; sourceTree = "<group>"; };
 		1AA8674C19FD6A0700AFD88B /* CrystalBall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrystalBall.h; sourceTree = "<group>"; };
 		1AA8674D19FD6A0700AFD88B /* CrystalBall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrystalBall.m; sourceTree = "<group>"; };
-		1AFF6B8E1A06970000F17DCE /* crystal_ball.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = crystal_ball.mp3; sourceTree = "<group>"; };
 		1AFF6B9A1A069B1800F17DCE /* AppHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppHelper.h; path = entities/AppHelper.h; sourceTree = "<group>"; };
 		1AFF6B9B1A069B1800F17DCE /* AppHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppHelper.m; path = entities/AppHelper.m; sourceTree = "<group>"; };
 		1AFF6BA31A069F1C00F17DCE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -74,6 +75,7 @@
 		1AA8671919FD357D00AFD88B = {
 			isa = PBXGroup;
 			children = (
+				1A4369D01A3F493700FFA487 /* crystal_ball.mp3 */,
 				1AFF6BA81A06A0CA00F17DCE /* Frameworks */,
 				1AA8672419FD357D00AFD88B /* CrystalBall */,
 				1AA8672319FD357D00AFD88B /* Products */,
@@ -99,8 +101,8 @@
 				1AA8672F19FD357D00AFD88B /* Main.storyboard */,
 				1AA8673219FD357D00AFD88B /* Images.xcassets */,
 				1AA8673419FD357D00AFD88B /* LaunchScreen.xib */,
-				1AFF6B8E1A06970000F17DCE /* crystal_ball.mp3 */,
 				1AA8672519FD357D00AFD88B /* Supporting Files */,
+				1A4369CF1A3F486900FFA487 /* Logging.h */,
 			);
 			path = CrystalBall;
 			sourceTree = "<group>";
@@ -243,7 +245,7 @@
 			files = (
 				1AA8673119FD357D00AFD88B /* Main.storyboard in Resources */,
 				1AA8673619FD357D00AFD88B /* LaunchScreen.xib in Resources */,
-				1AFF6B8F1A06970000F17DCE /* crystal_ball.mp3 in Resources */,
+				1A4369D11A3F493700FFA487 /* crystal_ball.mp3 in Resources */,
 				1AA8673319FD357D00AFD88B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
